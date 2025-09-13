@@ -8,4 +8,4 @@ ENV VERSION=19
 COPY ./llvm.sh /tmp/llvm.sh
 RUN bash /tmp/llvm.sh ${VERSION}
 
-ENTRYPOINT "clang++-${VERSION}"
+ENTRYPOINT clang++
