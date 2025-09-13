@@ -1,6 +1,9 @@
 services:
   clang:
-    build: .
+    build:
+      x-bake:
+        platforms:
+          - linux/amd64
     container_name: clang
     volumes:
       - ../../src:/opt/app/src:ro

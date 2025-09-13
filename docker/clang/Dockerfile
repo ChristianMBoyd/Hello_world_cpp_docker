@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 # install llvm script dependencies
 RUN apt-get update
-RUN apt-get install -y cmake lsb-release wget software-properties-common gnupg
+RUN apt-get install -y build-essential cmake lsb-release wget software-properties-common gnupg
 
 # grab llvm packages
 ENV VERSION=20
