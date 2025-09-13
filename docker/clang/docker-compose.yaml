@@ -2,8 +2,7 @@ services:
   clang:
     build: .
     container_name: clang
-    environment:
-      - VERSION="18"
     volumes:
-      - .:/opt/app/
-    command: ["opt/app/main.cpp", "-o", "opt/app/"]
+      - ../../src:/opt/app/src:ro
+      - ../../.build/clang:/opt/app/build
+    command: ["/opt/app/src/main.cpp", "-o", "/opt/app/build/main"]
