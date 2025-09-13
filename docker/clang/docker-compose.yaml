@@ -1,0 +1,9 @@
+services:
+  clang:
+    build: .
+    container_name: clang
+    environment:
+      - VERSION="18"
+    volumes:
+      - .:/opt/app/
+    command: ["opt/app/main.cpp", "-o", "opt/app/"]
