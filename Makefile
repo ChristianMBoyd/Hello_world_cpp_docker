@@ -1,4 +1,4 @@
-clang-build: clang-up clang-down
+clang: clang-up
 
 clang-up:
 	docker compose -f docker/clang/docker-compose.yaml up -d --build

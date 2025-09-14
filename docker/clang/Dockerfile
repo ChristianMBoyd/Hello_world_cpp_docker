@@ -23,6 +23,7 @@ RUN apt-get install -y "clang-${VERSION}" "clang-tools-${VERSION}" "clang-${VERS
     "clang-format-${VERSION}" "python3-clang-${VERSION}" "clangd-${VERSION}" "clang-tidy-${VERSION}"
 RUN apt-get clean
 
+# Create an entrypoint script to foward args to the right clang++ version
 RUN mkdir -p /opt/app
 RUN echo "clang++-${VERSION} \$@" > /opt/app/entrypoint.sh
 
